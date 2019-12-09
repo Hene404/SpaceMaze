@@ -1,2 +1,2 @@
 # SpaceMaze
-370 Project
+WebGL based game for 370 Project.
