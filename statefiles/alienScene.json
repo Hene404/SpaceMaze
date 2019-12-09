@@ -1,0 +1,925 @@
+
+{
+    "objects" : [
+        {
+            "name" : "alien",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.001, 0.001, 0.001], "specular": [0.8, 0.8, 0.8], "n":12, "alpha":1.0},
+            "type": "mesh",
+            "model" : "./models/alien.obj",
+            "parent" : null,
+            "position": [-3, 0, -3.5],
+            "scale": [1.0, 1.0, 1.0]
+        },
+        {
+            "name" : "enemy",
+            "material" : {"diffuse" : [0.2, 0.2, 1.0], "ambient": [0.001, 0.001, 0.001], "specular": [0.8, 0.8, 0.8], "n":12, "alpha":1.0},
+            "type": "mesh",
+            "subtype": "enemy",
+            "model" : "./models/alien.obj",
+            "parent" : null,
+            "position": [7, 0, 6.5],
+            "scale": [1.0, 1.0, 1.0]
+        },
+        {
+            "name" : "enemy2",
+            "material" : {"diffuse" : [0.8, 0.5, 0.2], "ambient": [0.001, 0.001, 0.001], "specular": [0.8, 0.8, 0.8], "n":12, "alpha":1.0},
+            "type": "mesh",
+            "subtype": "enemy",
+            "model" : "./models/alien.obj",
+            "parent" : null,
+            "position": [-1, 0, 2.5],
+            "scale": [1.0, 1.0, 1.0]
+        },
+        {
+            "name" : "coin1",
+            "material" : {"diffuse" : [0.8, 0.8, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":50, "alpha":0.7},
+            "type": "mesh",
+            "subtype": "coin",
+            "model" : "./models/apple.obj",
+            "parent" : null,
+            "position": [9.0, 0.0, 2.5],
+            "scale": [1.5, 1.5, 1.5]
+        },
+        {
+            "name" : "coin2",
+            "material" : {"diffuse" : [0.8, 0.8, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":50, "alpha":0.7},
+            "type": "mesh",
+            "subtype": "coin",
+            "model" : "./models/apple.obj",
+            "parent" : null,
+            "position": [15.0, 0, 0.5],
+            "scale": [1.5, 1.5, 1.5]
+        },
+        {
+            "name" : "coin3",
+            "material" : {"diffuse" : [0.8, 0.8, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":50, "alpha":0.7},
+            "type": "mesh",
+            "subtype": "coin",
+            "model" : "./models/apple.obj",
+            "parent" : null,
+            "position": [7, 0, -3.5],
+            "scale": [1.5, 1.5, 1.5]
+        },
+        {
+            "name" : "coin4",
+            "material" : {"diffuse" : [0.8, 0.8, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":50, "alpha":0.7},
+            "type": "mesh",
+            "subtype": "coin",
+            "model" : "./models/apple.obj",
+            "parent" : null,
+            "position": [-1, 0, 14.5],
+            "scale": [1.5, 1.5, 1.5]
+        },
+        {
+            "name" : "coin5",
+            "material" : {"diffuse" : [0.8, 0.8, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":50, "alpha":0.7},
+            "type": "mesh",
+            "subtype": "coin",
+            "model" : "./models/apple.obj",
+            "parent" : null,
+            "position": [17, 0, 8.5],
+            "scale": [1.5, 1.5, 1.5]
+        },
+        {
+            "name" : "playerPlace",
+            "material" : {"diffuse" : [0.8, 0.5, 0.2], "ambient": [0.001, 0.001, 0.001], "specular": [0.8, 0.8, 0.8], "n":12, "alpha":0.0},
+            "type": "mesh",
+            "model" : "./models/crate.obj",
+            "parent" : null,
+            "position": [-3, 0, -3.5],
+            "scale": [1.0, 1.0, 1.0]
+        },
+        {
+            "name" : "wall0R",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "textureNorm": "./materials/checkerNorm.jpg",
+            "parent" : null,
+            "position": [-5.0, -1.0, 13.5],
+            "scale": [2.0, 4.0, 10.0]
+        },
+        {
+            "name" : "wall1R",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [-5.0, -1.0, 9.0],
+            "scale": [2.0, 4.0, 10.0]
+        },
+        {
+            "name" : "wall2R",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [-5.0, -1.0, 4],
+            "scale": [2.0, 4.0, 10.0]
+        },
+        {
+            "name" : "wall3R",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [-5.0, -1.0, -1],
+            "scale": [2.0, 4.0, 10.0]
+        },
+        {
+            "name" : "wall4R",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [-5.0, -1.0, -6],
+            "scale": [2.0, 4.0, 10.0]
+        },
+        {
+            "name" : "wall0L",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "textureNorm": "./materials/checkerNorm.jpg",
+            "parent" : null,
+            "position": [20, -1.0, 13.5],
+            "scale": [2.0, 4.0, 10.0]
+        },
+        {
+            "name" : "wall1L",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [20, -1.0, 9.0],
+            "scale": [2.0, 4.0, 10.0]
+        },
+        {
+            "name" : "wall2L",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [20, -1.0, 4],
+            "scale": [2.0, 4.0, 10.0]
+        },
+        {
+            "name" : "wall3L",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [20, -1.0, -1],
+            "scale": [2.0, 4.0, 10.0]
+        },
+        {
+            "name" : "wall4L",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [20, -1.0, -6],
+            "scale": [2.0, 4.0, 10.0]
+        },
+        {
+            "name" : "wall0U",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "textureNorm": "./materials/checkerNorm.jpg",
+            "parent" : null,
+            "position": [15.5, -1.0, 17.5],
+            "scale": [10.0, 4.0, 2.5]
+        },
+        {
+            "name" : "wall1U",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [10.5, -1.0, 17.5],
+            "scale": [10.0, 4.0, 2.5]
+        },
+        {
+            "name" : "wall2U",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [5.5, -1.0, 17.5],
+            "scale": [10.0, 4.0, 2.5]
+        },
+        {
+            "name" : "wall3U",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [0.5, -1.0, 17.5],
+            "scale": [10.0, 4.0, 2.5]
+        },
+        {
+            "name" : "wall4U",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [-4.5, -1.0, 17.5],
+            "scale": [10.0, 4.0, 2.5]
+        },
+        {
+            "name" : "wall0B",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [15.5, -1.0, -6],
+            "scale": [11.0, 4.0, 2.5]
+        },
+        {
+            "name" : "wall1B",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [10.5, -1.0, -6],
+            "scale": [10.0, 4.0, 2.5]
+        },
+        {
+            "name" : "wall2B",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [5.5, -1.0, -6],
+            "scale": [10.0, 4.0, 2.5]
+        },
+        {
+            "name" : "wall3B",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [0.5, -1.0, -6],
+            "scale": [10.0, 4.0, 2.5]
+        },
+        {
+            "name" : "wall4B",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/metal_wall.jpg",
+            "parent" : null,
+            "position": [-4.5, -1.0, -6],
+            "scale": [10.0, 4.0, 2.5]
+        },
+        {
+            "name" : "iWall10_11",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-2, -1.0, -4.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall10_10",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-2, -1.0, -2.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall10_9",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-2, -1.0, -0.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall11_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-4, -1.0, 3.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall10_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-2, -1.0, 3.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall9_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [0, -1.0, 3.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall8_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [2, -1.0, 3.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall7_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [4, -1.0, 3.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall5_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [8, -1.0, 3.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall4_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [10, -1.0, 3.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall3_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [12, -1.0, 3.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall2_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [14, -1.0, 3.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall1_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [16, -1.0, 3.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall0_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [18, -1.0, 3.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall9_9",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [0, -1.0, -0.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall8_11",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [2, -1.0, -4.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall7_9",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [4, -1.0, -0.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall7_10",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [4, -1.0, -2.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall7_11",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [4, -1.0, -4.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall5_9",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [8, -1.0, -0.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall5_10",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [8, -1.0, -2.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall5_11",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [8, -1.0, -4.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall3_8",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [12, -1.0, 1.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall3_9",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [12, -1.0, -0.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall3_10",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [12, -1.0, -2.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall2_10",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [14, -1.0, -2.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall1_9",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [16, -1.0, -0.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall1_10",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [16, -1.0, -2.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall5_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [8, -1.0, 5.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall5_5",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [8, -1.0, 7.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall5_4",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [8, -1.0, 9.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall5_3",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [8, -1.0, 11.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall5_2",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [8, -1.0, 13.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall7_6",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [4, -1.0, 5.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall7_5",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [4, -1.0, 7.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall7_4",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [4, -1.0, 9.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall7_3",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [4, -1.0, 11.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall7_1",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [4, -1.0, 15.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall8_1",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [2, -1.0, 15.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall9_1",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [0, -1.0, 15.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall10_1",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-2, -1.0, 15.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall11_1",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-4, -1.0, 15.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall11_2",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-4, -1.0, 13.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall11_3",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-4, -1.0, 11.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall11_4",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-4, -1.0, 9.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall11_5",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-4, -1.0, 7.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall9_2",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [0, -1.0, 13.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall9_3",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [0, -1.0, 11.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall9_4",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [0, -1.0, 9.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall9_5",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [0, -1.0, 7.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall10_2",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [-4, -1.0, 15.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall3_1",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [12, -1.0, 13.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall3_4",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [12, -1.0, 11.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall3_5",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [12, -1.0, 9.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall2_5",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [12, -1.0, 7.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall0_5",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [14, -1.0, 7.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall0_x",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [18, -1.0, 7.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall0_4",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [16, -1.0, 9.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall3_i",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [14, -1.0, 13.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "iWall3_l",
+            "material" : {"diffuse" : [0.6, 0.6, 0.6], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": "./materials/steel_wall.jpg",
+            "parent" : null,
+            "position": [16, -1.0, 13.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "goal_square",
+            "material" : {"diffuse" : [1.0, 1.0, 1.0], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "cube",
+            "texture": null,
+            "parent" : null,
+            "position": [14, -1.0, 9.5],
+            "scale": [4.0, 4.0, 4.0]
+        },
+        {
+            "name" : "floorPlane",
+            "material" : {"diffuse" : [0.2, 0.2, 0.2], "ambient": [0.1, 0.1, 0.1], "specular": [0.8, 0.8, 0.8], "n":10, "alpha":1.0},
+            "type": "plane",
+            "texture": "./materials/default.png",
+            "textureNorm": "./materials/concreteBricks.jpg",
+            "parent" : null,
+            "position": [-5.0, -1.5, -6.0],
+            "scale": [52, 1, 50]
+        },
+        {
+            "name": "light0",
+            "type": "light",
+            "model" : "./models/lightbulb.obj",
+            "position" : [-1.45, 0.8, -1.5],
+            "material" : {"diffuse" : [1.0, 1.0, 1.0], "ambient": [0.1, 0.1, 0.1], "specular": [0.3, 0.3, 0.3], "n":1000, "alpha":1.0},
+            "colour" : [1.0, 1.0, 1.0],
+            "parent" : null,
+            "strength" : 0.75
+        },
+        {
+            "name": "light1",
+            "type": "light",
+            "model" : "./models/lightbulb.obj",
+            "position" : [1.9, 0.8, 2.5],
+            "material" : {"diffuse" : [1.0, 1.0, 1.0], "ambient": [0.1, 0.1, 0.1], "specular": [0.3, 0.3, 0.3], "n":1000, "alpha":1.0},
+            "colour" : [1.0, 1.0, 1.0],
+            "parent" : null,
+            "strength" : 0.75
+        },
+        {
+            "name": "enemyLight1",
+            "type": "light",
+            "model" : "./models/lightbulb.obj",
+            "position" : [6.0, 0.0, 6.0],
+            "material" : {"diffuse" : [1.0, 1.0, 1.0], "ambient": [0.1, 0.1, 0.1], "specular": [0.3, 0.3, 0.3], "n":1000, "alpha":0.0},
+            "colour" : [0.8, 0.0, 1.0],
+            "parent" : null,
+            "strength" : 0.75
+        },
+        {
+            "name": "enemyLight2",
+            "type": "light",
+            "model" : "./models/lightbulb.obj",
+            "position" : [6.0, 0.0, 6.0],
+            "material" : {"diffuse" : [1.0, 1.0, 1.0], "ambient": [0.1, 0.1, 0.1], "specular": [0.3, 0.3, 0.3], "n":1000, "alpha":0.0},
+            "colour" : [1.0, 0.0, 0.8],
+            "parent" : null,
+            "strength" : 0.75
+        },
+        {
+            "name": "coinLight1",
+            "type": "light",
+            "model" : "./models/lightbulb.obj",
+            "position" : [6.0, 0.0, 6.0],
+            "material" : {"diffuse" : [1.0, 1.0, 1.0], "ambient": [0.1, 0.1, 0.1], "specular": [0.3, 0.3, 0.3], "n":1000, "alpha":0.0},
+            "colour" : [1.0, 1.0, 0.0],
+            "parent" : null,
+            "strength" : 0.25
+        },
+        {
+            "name": "coinLight2",
+            "type": "light",
+            "model" : "./models/lightbulb.obj",
+            "position" : [6.0, 0.0, 6.0],
+            "material" : {"diffuse" : [1.0, 1.0, 1.0], "ambient": [0.1, 0.1, 0.1], "specular": [0.3, 0.3, 0.3], "n":1000, "alpha":0.0},
+            "colour" : [1.0, 1.0, 0.0],
+            "parent" : null,
+            "strength" : 0.25
+        },
+        {
+            "name": "coinLight3",
+            "type": "light",
+            "model" : "./models/lightbulb.obj",
+            "position" : [6.0, 0.0, 6.0],
+            "material" : {"diffuse" : [1.0, 1.0, 1.0], "ambient": [0.1, 0.1, 0.1], "specular": [0.3, 0.3, 0.3], "n":1000, "alpha":0.0},
+            "colour" : [1.0, 1.0, 0.0],
+            "parent" : null,
+            "strength" : 0.25
+        },
+        {
+            "name": "coinLight4",
+            "type": "light",
+            "model" : "./models/lightbulb.obj",
+            "position" : [6.0, 0.0, 6.0],
+            "material" : {"diffuse" : [1.0, 1.0, 1.0], "ambient": [0.1, 0.1, 0.1], "specular": [0.3, 0.3, 0.3], "n":1000, "alpha":0.0},
+            "colour" : [1.0, 1.0, 0.0],
+            "parent" : null,
+            "strength" : 0.25
+        },
+        {
+            "name": "coinLight5",
+            "type": "light",
+            "model" : "./models/lightbulb.obj",
+            "position" : [6.0, 0.0, 6.0],
+            "material" : {"diffuse" : [1.0, 1.0, 1.0], "ambient": [0.1, 0.1, 0.1], "specular": [0.3, 0.3, 0.3], "n":1000, "alpha":0.0},
+            "colour" : [1.0, 1.0, 0.0],
+            "parent" : null,
+            "strength" : 0.25
+        }
+    ]
+}
